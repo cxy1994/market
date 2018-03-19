@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+html { height:100%;}
+body{
+	margin:0;
+   background:-webkit-radial-gradient(bottom  center,circle,#016aa9,#d6dee0); /*Saf4+, Chrome */
+	background:-moz-radial-gradient(bottom  center,circle,#016aa9,#d6dee0);/* Firefox */
+	background:-ms-radial-gradient(bottom  center,circle,#016aa9,#d6dee0);/*IE */
+	text-align:center;
+	height:100%;
+	}
+.title{
+	font-family:"微软雅黑";
+	margin:0 auto;
+	text-shadow:#bfbfbf 1px 0px 0px;
+	color:#fefefe;
+	letter-spacing:0.7em;
+	padding-top:60px;
+	font-size:22px;
+	}
+.all{
+	width:100%;
+	height:75%;
+	/*border:1px solid;*/
+	}
+.center_box{
+	 display:inline-block; 
+	 zoom:1; 
+	 *display:inline; 
+	 vertical-align:middle;
+	 background-image:url(../images/icon/logi_bgblue.png);
+	 width:1000px;
+	 height:302px;
+	 position:relative;
+	}
+.hiddenDiv { 
+/*border:1px solid red;*/
+	height:100%;
+	overflow:hidden;
+	display:inline-block;
+	width:1px;
+	vertical-align:middle;
+	}
+.jiemian{
+	background:#eeeeee;
+	opacity:0.4;
+	border:2px solid white;
+	box-shadow:black 0px 0px 3em;
+	width:608px;
+	height:380px;
+	margin:0 auto;
+    margin-top:-50px;
+	border-radius:5px;
+	
+	}
+.left_orange{
+	background-image:url(../images/icon/left_orange.png);
+	display:block;
+	width:134px;
+	height:107px;
+	position:absolute;
+	top:-31px;
+	left:-34px;
+	}
+.jiemian2{
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #e6e6e6)); /* Saf4+, Chrome e6e6e6  f8f8f8*/
+	box-shadow:#757575 0px 0px 0.5em;
+	margin:0 auto;
+	margin-top:-353px;
+	width:541px;
+	height:247px;
+	border-radius:5px;
+	position:relative;
+	padding-top:25px;
+	padding-bottom:40px;
+	}
+.light{
+	background-image:url(../images/icon/light.png);
+	display:block;
+	width:282px;
+	height:196px;
+	position:absolute;
+	top:-31px;
+	left:-34px;
+	}
+#form1 {
+	font-family:"微软雅黑";
+	font-size:16px;
+	display:block;
+	color:#2a2a2a;
+	}
+.User{
+	margin:0 auto;
+	}
+td{
+	height:50px;
+	}
+input{
+	width:198px;
+	height:20px;
+	padding-left:2px;
+	float:left;
+	}
+.indentify{
+	width:90px;
+	margin-top:3px;
+	}
+.sub{
+	background-color:#016aa9;
+	width:118px;
+	height:37px;
+	font-size:16px;
+	font-family:"微软雅黑";
+	color:#fcfbf9;
+	margin:0 auto;
+	border:none;
+	border-radius:2px;
+	float:none;
+	text-align:center;
+	
+	}
+.inputText{
+	padding-left:4px;
+	}

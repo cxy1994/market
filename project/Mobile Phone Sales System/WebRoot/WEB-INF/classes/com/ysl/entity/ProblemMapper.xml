@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Dept.xml 在com.tarena.entity 包中  -->  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<!-- namespace 的值是 DeptMapper 接口
+  每个Mapper 接口对应一个配置文件  -->
+<mapper namespace="com.ysl.dao.ProblemDao">
+	<!-- add -->
+	<!-- 
+	1。当传入对象的属性为null时，在执行该SQL会报错，但是在项目中，新增时很多字段是可以为空的
+	，因此必须要解决这个问题。
+	  2.该问题产生的原因是，在执行SQL时MyBatis会自动通过对象中的属性给SQL中参数赋值，它会自动将java
+	  类型转换为数据库的类型，但一旦传入的是null它就无法判断这个类型应该是什么，就有可能将类型
+	  转换错误，从而报错
+	  3.要解决这个问题，需要针对这些可能为空的字段，手动指定其转换类型
+	  4.一般情况下，我们没有必要挨个  -->
+	<insert id="add" parameterType="com.ysl.entity.Problem" >
+	    insert into fankui(user_id,zhuti,neirong)
+	    values(#{user_id,jdbcType=INTEGER},
+	    #{zhuti,jdbcType=VARCHAR},
+	    #{neirong,jdbcType=VARCHAR})
+	</insert>
+	
+	
+	<select id="findAll" resultType="com.ysl.entity.Problem">
+	   select * from fankui;
+	</select>
+	
+	<delete id="delete" parameterType="int">
+	delete from fankui where fankui_id=#{fankui_id}
+	</delete>
+
+	
+  <!-- findByPage -->
+	<select id="findByPage" parameterType="com.ysl.entity.page.ProblemPage" resultType="com.ysl.entity.Problem">
+	     select * from fankui  order by fankui_id limit #{begin},#{pageSize}
+	    
+	</select>
+   <!-- findRows -->
+	<select id="findRows"  resultType="int">
+	  select count(*) from fankui 
+	</select>
+	
+	
+</mapper>
+
+
+
+
+
+
+
